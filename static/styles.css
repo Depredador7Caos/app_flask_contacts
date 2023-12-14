@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Cormorant+Garamond:wght@300&display=swap');
+
+.contactos{
+  display: flex;
+  transition: all 0.5s;
+}
+.contactos:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.botones{
+  text-align: center;
+}
+
+.botones .btn{
+  width: 125px;
+}
+
+.sombra{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+                rgba(17, 17, 26, 0.1) 0px 8px 24px,
+                rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+/*Font*/
+.cg{
+  font-family: "Cormorant Garamond";
+  font-weight: 800;
+}
+
+/* Estilos de contenido contactos*/
+.name{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.email{
+  font-size: 1rem;
+}
+.phone{
+  font-size: 0.9rem
+}
+
+.alert{
+  width: 25%;
+}
+
+/*Espacidos*/
+/* top | right | bottom | left */
+.pt-1 {padding: 1rem  0 0 0;}
+.pt-2 {padding: 2rem  0 0 0;}
+.pt-3 {padding: 3rem  0 0 0;}
+.pt-4 {padding: 4rem  0 0 0;}
+.pt-5 {padding: 5rem  0 0 0;}
+
+.pb-1 {padding: 0 0 1rem 0;}
+.pb-2 {padding: 0 0 2rem 0;}
+.pb-3 {padding: 0 0 3rem 0;}
+.pb-4 {padding: 0 0 4rem 0;}
+.pb-5 {padding: 0 0 5rem 0;}
+
+.pct-1 {padding: 1rem ;}
+.pct-2 {padding: 2rem ;}
+.pct-3 {padding: 3rem ;}
+.pct-4 {padding: 4rem ;}
+.pct-5 {padding: 5rem ;}
+/*Margenes*/
+/* top | right | bottom | left */
+.mct-a{margin: auto;}
+.mct-1{ margin: 1rem}
+.mct-2{ margin: 2rem}
+.mct-3{ margin: 3rem}
+.mct-4{ margin: 4rem}
+.mct-5{ margin: 5rem}
+
+.m-t-1{ margin: 1rem 0 0 0;}
+.m-t-2{ margin: 2rem 0 0 0;}
+.m-t-3{ margin: 3rem 0 0 0;}
+.m-t-4{ margin: 4rem 0 0 0;}
+.m-t-5{ margin: 5rem 0 0 0;}
+
+.contenedor{ justify-content: center;}

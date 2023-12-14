@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+<!-- Titulo del formulario -->
+{% block title %} {{super()}} Agregar nuevo contacto {% endblock title %}
+
+<!-- Contenido de la página -->
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{message}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+  <div class="contenedor m-t-1 text-center">
+    <h1 class="card-title pt-1 pb-1"> Lista de contactos agregados </h1>
+  </div>
+  <div class="row contenedor m-t-2 pt-4">
+
+    {% for contacto in contacts %}
+      <div class="card contactos pt-2 mct-1 sombra" style="width: 24rem;">
+        <div class="card-body mct-1">
+          <h5 class="name card-title pt-1">{{ contacto.fullname }}</h5>
+          <h5 class="email card-text pt-1">{{ contacto.email    }}</h5>
+          <h5 class="phone card-text pt-1">{{ contacto.phone    }}</h5>
+        </div>
+        <div class="card-body botones mct-1">
+          <a class="btn btn-warning" href="{{ url_for('contacto.update_contacto', id=contacto.id) }}">Update</a>
+          <a class="btn btn-danger" href="{{ url_for('contacto.delete_contacto', id=contacto.id) }}">Delete</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock content %}

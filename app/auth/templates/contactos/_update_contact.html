@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+<!-- Titulo del formulario -->
+{% block title %} {{super()}} Actualizar Contacto {% endblock title %}
+
+<!-- Contenido de la página -->
+{% block content %}
+
+  <!-- FORMULARIO actualizar CONTACTO -->
+  <div class="mt-4">
+    <form class="" action="/update/{{contacto.id}}" method="POST">
+      <div class="container">
+        <div class="col mt-3">
+          <label class="form-label col-5" for="fullname"> Insert your fullname </label>
+          <input class="form-control" type="text" name="fullname" id="fullname" value="{{contacto.fullname}}">
+        </div>
+
+        <div class="mt-3">
+          <label class="form-label" for="email"> Insert your E-mail </label>
+          <input class="form-control" type="email" name="email" id="email" value="{{contacto.email}}">
+        </div>
+
+        <div class="mt-3">
+          <label class="form-label" for="phone"> Insert your Phone </label>
+          <input class="form-control" type="text" name="phone" id="phone" value="{{contacto.phone}}">
+        </div>
+        <button class="btn btn-primary mt-4" style="width:125px;" type="submit" name="button"> Save </button>
+        <a class="btn btn-danger mt-4" style="width:125px;" type="submit" href="{{url_for('contacto.get_contactos')}}"> Cancel </a>
+      </div>
+    </form>
+  </div>
+{% endblock content %}

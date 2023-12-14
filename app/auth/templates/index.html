@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+<!-- Titulo del formulario -->
+{% block title %} {{super()}} Agregar nuevo contacto {% endblock title %}
+
+<!-- Contenido de la página -->
+{% block content %}
+  {% include 'contactos/_add_contact_form.html' %}
+{% endblock content %}
